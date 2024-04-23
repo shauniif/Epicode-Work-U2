@@ -301,5 +301,21 @@ footer a {
     }
 }
 @media print {
-    
+    header, iframe, iframe~section, aside, footer{
+        display: none;
+    }
+    #img_html5 {
+        border:2px solid #9e1f6d;
+        width: 45px;
+        height: 45px;
+        float: left;
+    }
+    #img_html5 img {
+        max-width: 100%;
+        border: 2px solid rgb(0,160,198);
+    }
+    #img_html5 + p {
+        margin-left: 4em;
+    }
+
 }
