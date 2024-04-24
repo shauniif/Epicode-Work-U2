@@ -1,0 +1,8 @@
+body {
+    color: #612406;
+}
+.area {
+    background-color: #fbf7e3;
+    display: flex;
+    flex-direction: column;
+}
