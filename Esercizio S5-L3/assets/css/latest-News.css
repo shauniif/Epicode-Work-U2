@@ -1,8 +1,83 @@
 body {
     color: #612406;
+    
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em;
+    font-weight: 700;
+    white-space: wrap;
 }
 .area {
     background-color: #fbf7e3;
     display: flex;
+    border-radius: 50px;
     flex-direction: column;
+    padding: 0 2em 1.4em;
+}
+#area-text {
+    display: flex;
+    flex-direction: column;
+}
+.area p {
+    padding-top: 0.1em;
+    font-size: 1.3em;
+    line-height: 1.25;
+}
+.area h3 {
+    margin-bottom: 0;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 1em 0 0.5em;
+}
+.area img {
+    padding-top: 1em;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 577px) {
+    .area {
+        background-color: #fbf7e3;
+        max-width: 700px;
+        border-radius: 50px;
+        padding: 0 1.4em 1.4em;
+    }
+    .area p {
+        font-size: 1.4em;
+        white-space: wrap;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+}
+@media screen and (min-width: 993px) {
+
+}
+@media screen and (min-width: 1201px) {
+    .area {
+        flex-direction: row-reverse; 
+        align-items: flex-start; 
+        padding: 1.4em; 
+        width: 300em;
+    }
+    #area-text {
+        margin-left: 1em;
+    }
+    .area p {
+        font-size: 0.9em;
+        width: 100%;
+        white-space: wrap;
+    }
+    .area img {
+        max-width: 60%;  
+        align-self: flex-start;
+        margin-top: 1em;
+    }
 }

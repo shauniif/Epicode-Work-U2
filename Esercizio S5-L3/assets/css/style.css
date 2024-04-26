@@ -1,0 +1,362 @@
+
+/*XSMALL DEVICE  <576px */
+* {
+  box-sizing: border-box;
+}
+body, .cart-product button {
+  color: #612406;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#all-page {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+nav {
+  background-color: #fbf7e3;
+  padding: 1em -4em;
+
+}
+nav, nav ul li {
+  border-radius: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 700;
+  padding: 0;
+  flex-shrink: 3;
+}
+nav ul li {
+  background-color: #ffdf7f;
+  margin: 0.5em;
+  padding: 0.4em;
+}
+li a {
+  text-decoration: none;
+  color: #612406;
+}
+nav ul li:nth-child(3) {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  order: -1;
+  
+  flex-grow: 5;
+  text-align: center;
+  word-wrap: break-word;
+}
+nav ul li img {
+  width: 2em;
+  vertical-align: middle;
+  margin-right: 0.8em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+h1, h2 {
+  text-align: center;
+  margin: 1em;
+  font-weight: 700;
+  white-space: wrap;
+}
+h1 {
+  font-size: 2em;
+}
+
+.cart-product div {
+  padding: 0.5em 0.5em 0.9em;
+}
+
+#all-Cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-product {
+  background-color:#fbf7e3;
+  display: flex;
+  flex-direction: column;
+  max-width: 25em;
+  margin-bottom: 2em;
+  border-radius: 5em;        
+}
+
+.cart-product img {
+  max-width: 100%;
+  border-radius: 5em 5em 0 0;
+  margin-bottom: 1em;
+}
+
+.product-Text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cart-product button {
+  width: 10em;
+  height: 2em;
+  align-self: center;
+  border: none;
+  border-radius: 50px;
+  background-color: #f3df85;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.product-Text div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-Text div:nth-child(1) h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.product-Text div:nth-child(1) p {
+  margin-top: 0;
+  text-align: center;
+}
+.product-Text div:nth-child(1) p, .product-Text div:nth-child(2) {
+  font-size: 1.1em;
+}
+
+
+h2 {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 1em;
+  font-weight: 700;
+  white-space: wrap;
+}
+.area {
+  background-color: #fbf7e3;
+  display: flex;
+  border-radius: 50px;
+  flex-direction: column;
+  padding: 0 2em 1.4em;
+}
+#area-text {
+  display: flex;
+  flex-direction: column;
+}
+.area p {
+  padding-top: 0.1em;
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+.area h3 {
+  margin-bottom: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 1em 0 0.5em;
+}
+.area img {
+  padding-top: 1em;
+  max-width: 100%;
+}
+
+
+/*SMALL DEVICE >= 576*/
+@media screen and (min-width: 577px) {
+  nav ul {
+  flex-wrap: nowrap;
+  }
+  nav {
+  border-radius: 0;
+    }
+  nav ul li {
+  margin: 0.2em;
+  }
+  li a {
+    white-space: nowrap;
+  } 
+  nav ul li:nth-child(3) {
+  order: 0;
+  }
+  nav ul li:nth-child(3) a {
+    white-space: nowrap;
+  }
+  #all-Cards {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+   }
+   .cart-product {
+    width: 16em;
+    margin-left: 1em;
+    }
+    .product-Text {
+        padding: 2em;
+    }
+    #fifth {
+        display: none;
+    }
+
+    .area {
+      background-color: #fbf7e3;
+      max-width: 700px;
+      border-radius: 50px;
+      padding: 0 1.4em 1.4em;
+  }
+  .area p {
+      font-size: 1.4em;
+      white-space: wrap;
+  }
+}
+/* MEDIUM DEVICE >= 768 */
+@media screen and (min-width: 769px) {
+  #all-page {
+    flex-direction: row;
+  }
+  
+  nav {
+    height: 213.9vh;
+    width: 23vw;
+    border-radius: 0;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+  nav ul li {
+    padding: 1.7em 1em;
+    width: 8em;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+  nav ul li:nth-child(3) {
+    order:-1;
+    padding: 1.3em;
+    font-size: 1em;
+  }
+  #all-Cards {
+    flex-wrap: nowrap;
+  }
+.cart-product {
+    margin: 1em;
+  }
+.product-Text div:nth-child(1) h4 {
+    white-space: wrap;
+    text-align: center;
+  }
+.product-Text div:nth-child(1) p {
+    white-space: nowrap;    
+  }
+.cart-product button {
+    width: 10em;
+    height: 3em;
+    font-size: 1em;
+  }
+    #fourth {
+    display: none;
+  } 
+}
+
+/* LARGE DEVICE >= 992 */
+@media screen and (min-width: 993px) {
+  nav { 
+    height: 113.9vh;
+  }
+
+  nav ul li {
+    width: 11em;
+    text-align: center;
+  }
+  nav ul li:nth-child(3) {
+    order:-1;
+    width: 11em;
+    padding: 1.3em;
+  }
+  nav ul li:nth-child(3) span {
+    font-size: 1.4em;
+    vertical-align: middle;
+  }
+  .cart-product button {
+    width: 8em;
+    height: 3em;
+    font-size: 1em;
+  }
+  #fourth {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .area {
+    flex-direction: row-reverse; 
+    align-items: flex-start; 
+    padding: 1.4em; 
+    max-width: max-content;
+  }
+  #area-text {
+    margin-left: 1em;
+  }
+  .area p {
+    font-size: 1em;
+    width: 100%;
+    white-space: wrap;
+  }
+  .area img {
+    max-width: 50%;  
+    align-self: flex-start;
+    margin-top: 1em;
+  }
+}
+/*EXTRA LARGE DEVICE >= 1200 */
+@media screen and (min-width: 1201px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+  nav ul li {
+    padding: 2em 1em;
+    width: 13em;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  nav ul li:nth-child(3) {
+    order:-1;
+    width: 18em;
+    padding: 2em 1em;
+  }
+  nav ul li:nth-child(3) span {
+    font-size: 1.8em;
+    vertical-align: middle;
+  }
+  #fifth {
+    display: inline-block;
+    text-align: center; 
+}
+h2~div {
+  margin-left: 1em;
+}
+.area {
+  flex-direction: row-reverse; 
+  align-items: flex-start; 
+  padding: 1.4em; 
+  max-width: max-content;
+}
+#area-text {
+  margin-left: 1em;
+}
+.area p {
+  font-size: 1em;
+  width: 100%;
+  white-space: wrap;
+}
+.area img {
+  max-width: 50%;  
+  align-self: flex-start;
+  margin-top: 1em;
+}
+}
