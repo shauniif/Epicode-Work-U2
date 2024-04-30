@@ -38,9 +38,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#Saldi"
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#Saldi">Saldi</a>
@@ -54,10 +52,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Last Minute</a>
+                <a class="nav-link" href="#lm">Last Minute</a>
               </li>
               <li>
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#rec"
                   >Recensioni</a
                 >
               </li>
@@ -77,24 +75,25 @@
         </div>
       </nav>
       <div
-        class="container mt-4 text-black-50 bg-body-tertiary justify-content-center align-items-center"
+        class="container mt-4 text-black-50 bg-body-tertiary justify-content-center align-items-center p-4"
       >
         <div class="row p-4">
           <div
             class="col-12 border border-top-0 border-start-0 border-end-0 border-bottom-dark"
           >
-            <p class="mb-0">
-              <span class="fs-1">Eveline-R-</span>Feel the Freedom
+            <p class="mb-0 text-success">
+              <span class="fs-1 text-black-50">Good Vibes -</span>Live your
+              Story
             </p>
           </div>
           <div class="col-12">
             <p class="fst-italic text-center mt-1">
-              Scopri le destinazioni più calde del momento
+              Scopri e inventa nuovi posti magici dove sei tu il protagonista!
             </p>
           </div>
           <div class="col-12">
             <button type="button" class="btn btn-info text-light fw-bold m-2">
-              Prenota ora
+              Clicca qui per saperne di più
             </button>
           </div>
         </div>
@@ -103,14 +102,24 @@
 
     <main>
       <div class="container mt-2">
-        <div class="row justify-content-lg-between mb-2">
-          <div class="col"><h2 id="Saldi">Saldi</h2></div>
-          <div class="col align-self-center text-info">Nascondi sezione</div>
+        <div class="d-flex justify-content-between mb-2">
+          <h2 id="Saldi">Saldi</h2>
+          <button
+            type="button"
+            class="btn btn-outline-info border-0"
+            data-bs-toggle="collapse"
+            href="#sezione-da-nascondere"
+          >
+            Nascondi sezione
+          </button>
         </div>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2">
+        <div
+          class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2"
+          id="sezione-da-nascondere"
+        >
           <div class="col">
             <div class="card border border-info">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -125,7 +134,7 @@
           </div>
           <div class="col">
             <div class="card border border-info">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -141,7 +150,7 @@
 
           <div class="col">
             <div class="card border border-info">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -156,7 +165,7 @@
           </div>
           <div class="col d-md-none d-lg-block">
             <div class="card border border-info">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -172,14 +181,24 @@
         </div>
       </div>
       <div class="container mt-2">
-        <div class="row justify-content-lg-between mb-2">
-          <div class="col"><h2 id="welcome-summer">Welcome Summer</h2></div>
-          <div class="col align-self-center text-info">Nascondi sezione</div>
+        <div class="d-flex justify-content-lg-between mb-2">
+          <h2 id="welcome-summer">Welcome Summer</h2>
+          <button
+            type="button"
+            class="btn btn-outline-info border-0"
+            data-bs-toggle="collapse"
+            href="#altra-sezione-da-nascondere"
+          >
+            Nascondi sezione
+          </button>
         </div>
-        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-2">
+        <div
+          class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-2"
+          id="altra-sezione-da-nascondere"
+        >
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -194,8 +213,8 @@
           </div>
 
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -210,8 +229,8 @@
           </div>
 
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -226,8 +245,8 @@
           </div>
 
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -242,8 +261,8 @@
           </div>
 
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -258,8 +277,8 @@
           </div>
 
           <div class="col d-md-none d-lg-block">
-            <div class="card border shadow-lg">
-              <img src="/assets/img/luogo.jpg" class="card-img-top" alt="..." />
+            <div class="card border shadow-lg summer">
+              <img src="/assets/img/dadi.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Titolo</h5>
                 <p class="card-text">
@@ -275,163 +294,224 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container d-none d-md-block">
         <div class="row">
           <div class="col">
             <h2>Offerta del giorno</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-7">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+          <div class="col-7 text-center">
+            <img
+              class="rounded-4 shadow w-50"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
           </div>
           <div class="col-5">
-            <h4>Virgin River</h4>
+            <h4>Sconto imperdibile sul nuovo set di dadi!</h4>
             <p class="font-monospace">15.01.2021-31.01-2021</p>
-            <p class="lead">Baite a partire da 500€ non fartele sfuggire!</p>
-            <button type="button" class="btn btn-dark">Best offer</button>
+            <p class="lead">... a partire da 5€ non fartele sfuggire!</p>
+            <button type="button" class="btn btn-dark p-0 px-1 rounded-4">
+              Best offer
+            </button>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <div class="row">
+        <h2 id="lm">Offerte che stanno per scadere</h2>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-2">
           <div class="col">
-            <h2>Last Minute</h2>
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col">
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col">
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col">
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col">
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col">
+            <img
+              class="card-img rounded-4 shadow"
+              src="./assets/img/dadi.jpg"
+              alt=""
+            />
           </div>
         </div>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-5 g-md-5">
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+      </div>
+      <div class="container">
+        <h2 id="rec" class="text-center">Dicono di noi</h2>
+        <div class="row">
+          <div class="col-1 text-end">
+            <img
+              src="./assets/img/Screenshot 2024-04-30 173522.png"
+              alt="User_Propic"
+              class="border border-info rounded-5 w-25"
+            />
           </div>
-
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+          <div class="col-11">
+            <p class="fw-bold">Username</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              neque optio iure quos, quasi doloribus dignissimos culpa quis
+              reiciendis! Magnam in culpa quasi reprehenderit qui possimus iste
+              officia mollitia commodi. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Similique recusandae earum doloremque corporis
+              amet consequatur nihil, minima quae corrupti, aliquid officia
+              explicabo pariatur sed. Deserunt expedita voluptas non veniam?
+              Rerum?
+            </p>
           </div>
-
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+        </div>
+        <div class="row">
+          <div class="col-1 text-end">
+            <img
+              src="./assets/img/Screenshot 2024-04-30 173522.png"
+              alt="User_Propic"
+              class="border border-info rounded-5 w-25"
+            />
           </div>
-
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+          <div class="col-11">
+            <p class="fw-bold">Username</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              neque optio iure quos, quasi doloribus dignissimos culpa quis
+              reiciendis! Magnam in culpa quasi reprehenderit qui possimus iste
+              officia mollitia commodi. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Similique recusandae earum doloremque corporis
+              amet consequatur nihil, minima quae corrupti, aliquid officia
+              explicabo pariatur sed. Deserunt expedita voluptas non veniam?
+              Rerum?
+            </p>
           </div>
-
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+        </div>
+        <div class="row">
+          <div class="col-1 text-end">
+            <img
+              src="./assets/img/Screenshot 2024-04-30 173522.png"
+              alt="User_Propic"
+              class="border border-info rounded-5 w-25"
+            />
           </div>
-
-          <div class="col">
-            <img class="rounded-4 shadow" src="./assets/img/luogo.jpg" alt="" />
+          <div class="col-11">
+            <p class="fw-bold">Username</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              neque optio iure quos, quasi doloribus dignissimos culpa quis
+              reiciendis! Magnam in culpa quasi reprehenderit qui possimus iste
+              officia mollitia commodi. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Similique recusandae earum doloremque corporis
+              amet consequatur nihil, minima quae corrupti, aliquid officia
+              explicabo pariatur sed. Deserunt expedita voluptas non veniam?
+              Rerum?
+            </p>
           </div>
         </div>
       </div>
     </main>
+    <footer class="text-bg-dark opacity-100 text-center p-5">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        data-bs-toggle="modal"
+        data-bs-target="#contattaci"
+      >
+        Contattaci
+      </button>
+      <p class="mt-3">
+        <span id="data"></span> &copy; Kalina Travel LTD. All Right Reserved
+      </p>
+
+      <div class="modal" id="contattaci" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-dark">Lascia la tua opinione!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label text-dark"
+                  >Indirizzo Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                />
+                <div class="mb-3">
+                  <label
+                    for="exampleFormControlTextarea1"
+                    class="form-label text-dark"
+                    >Scrivi qui:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Chiudi
+              </button>
+              <button type="button" class="btn btn-info">Salva</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
- 
-        Abbiamo bisogno di un sito web per un'agenzia di viaggi!
-
-In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
-
-Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
-
-
-Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
-
-Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
-Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
-
-Esercizi:
-
-1) Implementa una navbar con questi elementi di menu:
-Home
-Saldi
-Welcome Summer
-Last Minute
-Recensioni
-
-Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
-
-2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
-
-3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
-una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
-
-Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
-
-4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
-
-In questa sezione dovranno esserci:
-
-4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
-3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
-2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
-
-le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
-
-5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
-
-In questa sezione dovranno esserci:
-
-6 card per destinazioni per linea a schermo extra large
-3 card per destinazioni per linea a schermo grande (desktop)
-2 card per destinazioni per linea a schermo medio (tablet)
-2 card per destinazioni per linea a schermo piccolo (mobile)
-
-6) Implementa la sezione "Offerta del giorno". Qui avrai:
-
-66% dello spazio dedicato all'immagine del luogo di destinazione
-33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
-
-l'immagine avrà i bordi arrotondati e un'ombra leggera
-per il contenuto: il nome dovrà essere più grande del resto,
-le date dovranno essere formattate con font "monospace",
-il prezzo dovrà essere definito come "lead"
-e il badge sarà scuro
-
-
-7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
-
-8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
-
-9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
-
-10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
-Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
-
-11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
-
-
-
-EXTRAS
-
-12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
-
-13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
-
-14) Crea un modale con un campo email e un messaggio.
-
-15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
-
-16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
-
-17) Crea una funzione che rimuova tutte le "card" dalla pagina
-
-
-</head>
-
-<body></body>
-
-</html> -->
