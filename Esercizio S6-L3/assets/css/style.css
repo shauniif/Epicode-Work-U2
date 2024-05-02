@@ -35,7 +35,7 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-body, a {
+body, a, button {
   font-family: "Roboto", sans-serif;
   color: #f4f4f4;
 }
