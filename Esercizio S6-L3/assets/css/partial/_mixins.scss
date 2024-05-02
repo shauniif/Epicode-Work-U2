@@ -1,0 +1,10 @@
+@mixin title-big {
+    font: {
+        size: 4em;
+    }
+}
+
+@mixin floating {
+    border-radius: 50px;
+    box-shadow: 1px 1px 13px rgb(155, 154, 154);
+}

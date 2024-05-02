@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        display: flex;   
+    }
+    li {
+        margin-left: 1em;
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,16 @@
+$color-array: (
+    blue: $col-blue, 
+    green: $col-green, 
+    orange: $col-oran,
+);
+
+@each $name, $col-btn in $color-array {
+    .btn-color-#{$name} {
+        background-color: #{$col-btn};
+    }
+}
+
+@mixin buttonStyle {
+    width: 8em;
+    border: 0;
+}
