@@ -1,26 +1,38 @@
-$spacing-mar: (
-xs: 0.5em,
+$spacing: (
+xs: 0.75em,
 n: 1em,
-md: 1.25em,
-lg: 1.5em,
-xl: 1.75em,
-xxl: 2em,
+md: 1.5em,
+lg: 2.25em,
+xl: 3em,
+xxl: 10em,
 );
-@each $size, $value in $spacing-mar {
-    .margin-#{$size} {
-        margin: #{$value};
-    }
+@mixin generated-margin($direction: null) {
+    @each $size, $value in $spacing{
+        .margin-#{$direction}-#{$size} {
+           @if $direction {
+            margin-#{$direction}: $value;
+
+        } @else { 
+            margin: $value;
+        }
+     }
+  }
 }
-$spacing-p: (
-xs: 0.5em,
-n: 1em,
-md: 1.25em,
-lg: 1.5em,
-xl: 1.75em,
-xxl: 2em,
-);
-@each $size, $value in $spacing-p {
-    .padding-#{$size} {
-        padding: #{$value};
-    }
+@mixin generated-padding($direction: null) {
+    @each $size, $value in $spacing{
+        .padding-#{$direction}-#{$size} {
+           @if $direction {
+            padding-#{$direction}: $value;
+        } @else { 
+            padding: $value;
+        }
+     }
+  }
 }
+
+@include generated-padding(inline);
+@include generated-padding(block);
+
+
+@include generated-margin(inline);
+@include generated-margin(block);

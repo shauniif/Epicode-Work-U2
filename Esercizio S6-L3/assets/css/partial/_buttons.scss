@@ -7,10 +7,16 @@ $color-array: (
 @each $name, $col-btn in $color-array {
     .btn-color-#{$name} {
         background-color: #{$col-btn};
+        color: $col-text;
     }
 }
 
-@mixin buttonStyle {
+.btn {
     width: 8em;
     border: 0;
+    padding: 1.2em;
+    margin: 0.1em;
+    &:hover{
+    transform: scale(0.95);
+    }
 }

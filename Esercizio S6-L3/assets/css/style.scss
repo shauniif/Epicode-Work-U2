@@ -2,8 +2,66 @@
 @import 'partial/colors';
 @import 'partial/mixins';
 @import 'partial/font';
-@import 'partial/header';
 @import 'partial/navbar';
 @import 'partial/buttons';
-@import 'partial/hero';
 @import 'partial/spacing';
+@import 'partial/animation';
+
+body {
+    color: $col-text;
+    font-family: $font-page;
+}
+
+header {
+    background-color: $col-violet;
+    nav {
+        a {
+        color:$col-text;
+        }
+        a:hover {
+        color: $col-oran;
+        }
+    }
+    .hero-section{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+        h1 {
+        @include title-big;
+        @include animation-element(1s, 10px, 0, 300ms);
+        }
+        p {
+            font-size: 1.5em;
+            width: 35em;
+            @include animation-element(1s, 10px, 0, 300ms);
+        }
+        img {
+        max-width: 30%;
+        position: absolute;
+        top: 110px;
+        right: 200px;
+        @include floating(50px, 1px 1px 10px rgb(255, 255, 255), 1px solid transparent);
+        @include animation-element(1s, 10px, 0, 300ms);
+        }
+    }
+    button {
+        @include animation-element(1s, 10px, 0, 300ms);
+    }
+    
+}
+main {
+    section {
+        @include img(4);
+    }       
+    div {
+        padding-left: 0.3em;
+        &:nth-child(2) {
+            padding-left: 0;
+        }
+    }
+
+    img {
+        max-width: 95%;
+        @include floating;
+    }
+}

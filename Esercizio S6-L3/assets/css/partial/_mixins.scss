@@ -1,10 +1,22 @@
 @mixin title-big {
     font: {
-        size: 4em;
+        size: 5em;
+        weight: 700;
     }
+    letter-spacing: -6px;
+    line-height: 0.95;
+    margin-bottom: 1rem;
 }
 
-@mixin floating {
-    border-radius: 50px;
-    box-shadow: 1px 1px 13px rgb(155, 154, 154);
+@mixin floating($radius: 30px, $shadow: 1px 1px 13px  rgb(155, 154, 154), $border: 1px solid transparent) {
+    border-radius: $radius;
+    box-shadow: $shadow;
+    border: $border;
+}
+@mixin img($numbimg) {
+    display: flex;
+    align-items: center;
+    & > * {
+        width: calc(100 / $numbimg) * 1%;
+    }
 }
