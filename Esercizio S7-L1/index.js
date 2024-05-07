@@ -41,8 +41,10 @@ class Pet {
         this.breed = _breed
     }
     sameOwner(secondUser) {
-        this.ownerName === secondUser.ownerName
-        console.log(sameOwner());
+        if(this.ownerName === secondUser.ownerName) {
+            return true;
+        }
+        console.log(sameOwner);
     };
     
 }
@@ -57,12 +59,12 @@ uploadAnimalInformation = function() {
         const newLi = document.createElement('li');
         newLi.innerHTML = `
         <div class="card">
-            <div class="card-body">
-            <h5 class="card-title">${animal.petName}</h5>
-            <h5 class="card-title">${animal.ownerName}</h5>
-            <h5 class="card-title">${animal.spieces}</h5>
-            <h5 class="card-title">${animal.breed}</h5>
-        </div>`
+    <div class="card-body">
+    <h5 class="card-title">${animal.petName}</h5>
+    <h5 class="card-title">${animal.ownerName}</h5>
+    <h5 class="card-title">${animal.spieces}</h5>
+    <h5 class="card-title">${animal.breed}</h5>
+</div>`
 animalDateUl.appendChild(newLi); // prima va l'elemento padre poi l'elemento figlio
     });
 }
