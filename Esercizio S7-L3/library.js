@@ -1,6 +1,5 @@
 let shopBook = []
 const rowCart = document.getElementById('shopBook');
-let colwithTitle = document.createElement('li');
 let generateCard = function(arrayOfBooks) {
     const rowForCard = document.getElementById('row-for-books');
     arrayOfBooks.forEach((book) => {
@@ -9,22 +8,23 @@ let generateCard = function(arrayOfBooks) {
         colBook.innerHTML = `<div class="card">
         <img src="${book.img}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title mt-2">${book.title}</h5>
-          <p class="card-text">Price: ${book.price}€</p>
-          <button type="button" class="btn btn-warning text-light" onclick="removeBook(event)">Scarta</button>  
-          <button type="button" class="btn btn-danger" onclick="addBook(event)">Compra ora</button>
+        <h5 class="card-title mt-2">${book.title}</h5>
+        <p class="card-text">Price: ${book.price}€</p>
+        <button type="button" class="btn btn-warning text-light" onclick="removeBook(event)">Scarta</button>  
+        <button type="button" class="btn btn-danger" onclick="addBook(event)">Compra ora</button>
         </div>
-      </div>`
-      rowForCard.append(colBook);
-
+        </div>`
+        rowForCard.append(colBook);
+        
     })
 }
 let removeBook = function(e) {
     let removedBood = e.target.closest('.card').remove()
     console.log(removedBood)
 }
- 
+
 let addBook = function (e) {
+    let colwithTitle = document.createElement('li');
     let title =  e.target.closest('.card').querySelector('.card-title').innerText
     colwithTitle.innerText = title;
     let elementOfshopBook = colwithTitle.innerText;
@@ -69,7 +69,9 @@ console.log(shopBookLocalStorage)
 if(shopBookLocalStorage) {
     shopBook = shopBookLocalStorage;
     shopBook.forEach((book) => {
-
+        let colwithTitle = document.createElement('li');
+        colwithTitle.innerHTML = book;
+        rowCart.appendChild(colwithTitle);
     })
 }
 getBooks();
