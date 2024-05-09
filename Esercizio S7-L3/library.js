@@ -1,5 +1,4 @@
 let shopBook = []
-const rowCart = document.getElementById('shopBook');
 let generateCard = function(arrayOfBooks) {
     const rowForCard = document.getElementById('row-for-books');
     arrayOfBooks.forEach((book) => {
@@ -19,20 +18,39 @@ let generateCard = function(arrayOfBooks) {
     })
 }
 let removeBook = function(e) {
-    let removedBood = e.target.closest('.card').remove()
+    let removedBood = e.target.closest('.col').remove()
     console.log(removedBood)
+}
+let createLiShop = function(cardTitle, priceBook) {
+    const rowCart = document.getElementById('shopBook');
+    let colwithTitle = document.createElement('li');
+    colwithTitle.classList.add('d-flex', 'mt-2', 'justify-content-between');
+    let pwithPrice = document.createElement('p');
+    pwithPrice.classList.add('ms-2')
+    pwithPrice.innerHTML = priceBook;
+    colwithTitle.innerHTML = cardTitle;
+    let deleteBook = document.createElement('button');
+    deleteBook.innerHTML = 'Elimina libro'
+    deleteBook.classList.add('btn', 'btn-danger','ms-2');
+    deleteBook.addEventListener('click', function(e, i) {
+        e.target.closest('.d-flex').remove();
+        localStorage.removeItem(shopBook[i]);
+    })
+    colwithTitle.appendChild(pwithPrice);
+    colwithTitle.appendChild(deleteBook)
+    rowCart.appendChild(colwithTitle);
 }
 
 let addBook = function (e) {
-    let colwithTitle = document.createElement('li');
     let title =  e.target.closest('.card').querySelector('.card-title').innerText
-    colwithTitle.innerText = title;
-    let elementOfshopBook = colwithTitle.innerText;
-    shopBook.push(elementOfshopBook);
+    let price = e.target.closest('.card').querySelector('.card-text').innerText
+    let elementOfshopBook = title;
+    let priceofShopbook = price;
+    shopBook.push({elementOfshopBook, priceofShopbook});
     console.log(shopBook);
     localStorage.setItem("shopBook", JSON.stringify(shopBook))
+    createLiShop(title, price)
     console.log('corretto');
-    rowCart.appendChild(colwithTitle)
 }
 const getBooks = function() {
     fetch('https://striveschool-api.herokuapp.com/books', {
@@ -69,9 +87,7 @@ console.log(shopBookLocalStorage)
 if(shopBookLocalStorage) {
     shopBook = shopBookLocalStorage;
     shopBook.forEach((book) => {
-        let colwithTitle = document.createElement('li');
-        colwithTitle.innerHTML = book;
-        rowCart.appendChild(colwithTitle);
+        createLiShop(book)
     })
 }
 getBooks();
