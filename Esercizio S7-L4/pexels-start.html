@@ -135,9 +135,7 @@
             them in a cool way!
           </p>
           <p>
-            <a href="#" class="btn btn-primary my-2" id="first-btn"
-              >Load Images</a
-            >
+            <a href="#" class="btn btn-primary my-2">Load Images</a>
             <a href="#" class="btn btn-secondary my-2" id="second-btn"
               >Load Secondary Images</a
             >
@@ -146,6 +144,27 @@
       </section>
       <div class="album py-5 bg-light">
         <div class="container">
+          <div class="row mb-3">
+            <div class="col">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="search-img"
+                />
+                <button
+                  id="search-btn"
+                  class="btn btn-outline-primary"
+                  type="button"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+
           <div class="row" id="row-album">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
@@ -154,8 +173,8 @@
                   class="bd-placeholder-img card-img-top"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Lorem Ipsum</h5>
-                  <p class="card-text">
+                  <h5 class="card-title d-flex flex-column">Lorem Ipsum</h5>
+                  <p class="card-text flex-grow-1">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
@@ -461,6 +480,33 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" id="modalView">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="" alt="" />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

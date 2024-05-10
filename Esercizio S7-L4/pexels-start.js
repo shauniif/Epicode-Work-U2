@@ -1,40 +1,28 @@
-let btnStart = document.getElementById('first-btn')
-let btnStart2 = document.getElementById('second-btn')
-let site = `https://api.pexels.com/v1/search?query=lake`
-let nMeth = 'GET'
+let firstBtn = document.getElementsByClassName('btn-primary')[0];
+let secondBtn = document.getElementsByClassName('btn-secondary')[0];
 
-let unpackAllTheArray = function(arrayofImg) {
-    let newArrayofImg = [...arrayofImg.photos]
-    console.log(newArrayofImg)
-    generateimg(newArrayofImg)
 
-}
-let generateimg = function(imgArr) {
-    let albumImg = document.getElementById('row-album');
-    albumImg.innerHTML = '';
-    imgArr.forEach((img) => {
-    const newCol = document.createElement('div')
-    newCol.classList.add('col-md-4')
-    newCol.innerHTML = `<div class="card">
-    <img src="${img.src.original}" class="card-img-top" alt="img">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <div>
-      <button class="btn btn-warning">Hide</button>
-      <button class="btn btn-danger">Close</button>
-      </div>
-    </div>
-  </div>`
-  console.log('ciao')
-  albumImg.appendChild(newCol);
-    }); 
+let changeImg = function(arr) {
+let arrImg = document.getElementsByClassName('card-img-top');
+
+let arrImgArr = Array.from(arrImg)
+
+arrImgArr.forEach((imgCard, i) => {
+    imgCard.setAttribute('src', arr[i].src.small)
+    imgCard.addEventListener('click', function(){
+        location.assign('details.html?imageId='+ arr[i].id)
+    })
+});
 };
 
-
-let submitEvent = function() {
-    fetch(site, {
-        method: nMeth,
+let modalFillImg = function(e) {
+    let modalImg = document.querySelector('.modal-body img'); 
+    let imgSrcforModal = e.target.closest('.card').querySelector('img').src;
+    modalImg.setAttribute('src', imgSrcforModal)
+    console.log('prendo immagine', imgSrcforModal)
+}
+let submitEvent = function(query) {
+    fetch(`https://api.pexels.com/v1/search?query=${query}`, {
         headers: {
             "Content-type": "application/json",
             Authorization: "s2e0eHr7a2UmNOM5ClRw2lnkEy4c6PnG2DEVOQWYXGdKVM9UWcrde60y"
@@ -48,9 +36,10 @@ let submitEvent = function() {
             throw new Error('non va qualcosa')
         }
     })
-    .then((allobj) =>{
-        console.log('array', allobj) 
-        unpackAllTheArray(allobj) 
+    .then((allobj) => {
+        console.log('array', allobj.photos) 
+        changeImg(allobj.photos);
+        changeText(allobj.photos)
     })
     .catch((err) => {
         console.log('ERRORE', err)
@@ -58,8 +47,43 @@ let submitEvent = function() {
 }
 
 
+let changeBtnText = document.getElementsByClassName('btn-outline-secondary');
+let changeBtnTextArr = Array.from(changeBtnText)
+changeBtnTextArr.forEach(btn => {
+    if (btn.innerText === 'Edit') {
+        btn.innerText = 'Hide'
+        btn.addEventListener('click', function(e) {
+            e.target.closest('.col-md-4').classList.add('d-none')
+        })
+    } else {
+        btn.addEventListener('click', modalFillImg)
+        btn.setAttribute('data-bs-toggle', "modal")
+        btn.setAttribute('data-bs-target',"#modalView")
+    }
 
-btnStart.addEventListener('click', function() {
-    submitEvent()
-    
+});
+
+let changeText = function(arr) {
+    let nineMins = document.querySelectorAll('small.text-muted')
+    console.log(nineMins)
+    nineMins.forEach((stext, i) => {
+        stext.innerHTML = arr[i].id
+    })
+}
+
+
+submitEvent('sea')
+firstBtn.addEventListener('click', function() {
+    submitEvent('lake')
 } )
+secondBtn.addEventListener('click', function() {
+    submitEvent('space')
+} )
+
+const searchInput = document.getElementById('search-img')
+const searchButton = document.getElementById('search-btn')
+
+searchButton.addEventListener('click', function() {
+    submitEvent(searchInput.value)
+}) 
+
